@@ -10,6 +10,11 @@
       "StackName": "amplify-admin4-dev-163200",
       "StackId": "arn:aws:cloudformation:us-east-1:437357671597:stack/amplify-admin4-dev-163200/14254570-caf4-11eb-bf8e-0ea3a6460f01",
       "AmplifyAppId": "d1m1687zph9ts8"
+    },
+    "categories": {
+      "auth": {
+        "admin450e63acc": {}
+      }
     }
   }
 }

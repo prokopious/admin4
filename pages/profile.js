@@ -14,10 +14,14 @@ function Profile() {
   }, [])
   return (
     <div className="login">
-      {user && <h1>Welcome, <span className="code">{user.username}</span></h1>}
+      {user && (
+        <h1>
+          Welcome, <span className="code">{user.username}</span>
+        </h1>
+      )}
       <AmplifySignOut />
     </div>
   )
 }
 
-export default withAuthenticator(Profile);
+export default withAuthenticator(Profile)
