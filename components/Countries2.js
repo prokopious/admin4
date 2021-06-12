@@ -38,8 +38,6 @@ export default function Countries2() {
     return null
   }
 
-
-
   const countries = data.listSquirrels
   console.log(countries)
 
@@ -112,87 +110,77 @@ export default function Countries2() {
 
         if (a % 2 === 1) {
           return (
-        
-              <div className="wrapper" key={item.id}>
-                <div className="box">
-                  {" "}
-                  <Link href="/orders/[id]" as={`/orders/${item.id}`}>
-                    <a>{item.amount.name}</a>
-                  </Link>
-                </div>
-
-                <div className="box">{item.amount.address.line1}</div>
-
-                <div className="box">
-                  {" "}
-                  {item.amount.cartItems.map(item => {
-                    return (
-                      <span key={item.id}>
-                        <span>
-                          {item.id}: {item.quantity};{" "}
-                        </span>
-                      </span>
-                    )
-                  })}
-                </div>
-
-                <div className="box">
-                  <button
-                    style={{
-                      backgroundColor: item.pizza === 3 ? "blue" : "red",
-                    }}
-                    onClick={updateItem}
-                  >
-                    update
-                  </button>
-                  <button id="del" onClick={myFunction}>
-                    delete
-                  </button>
-                </div>
+            <div className="wrapper" key={item.id}>
+              <div className="box">
+                {" "}
+                <Link href="/orders/[id]" as={`/orders/${item.id}`}>
+                  <a>{item.amount.name}</a>
+                </Link>
               </div>
-           
+
+              <div className="box">{item.amount.address.line1}</div>
+
+              <div className="box">
+                {" "}
+                {item.amount.cartItems.map(item => {
+                  return (
+                    <span key={item.id}>
+                      <span>
+                        {item.id}: {item.quantity};{" "}
+                      </span>
+                    </span>
+                  )
+                })}
+              </div>
+
+              <div className="box">
+                <button className="blue">
+                  <Link href="/orders/[id]" as={`/orders/${item.id}`}>
+                    <a>update</a>
+                  </Link>
+                </button>
+                <button id="del" onClick={myFunction}>
+                  delete
+                </button>
+              </div>
+            </div>
           )
         } else {
           return (
-            
-              <div className="wrapper" key={item.id}>
-                <div className="box3">
-                  {" "}
-                  <Link href="/orders/[id]" as={`/orders/${item.id}`}>
-                    <a>{item.amount.name}</a>
-                  </Link>
-                </div>
-
-                <div className="box3">{item.amount.address.line1}</div>
-
-                <div className="box3">
-                  {" "}
-                  {item.amount.cartItems.map(item => {
-                    return (
-                      <span key={item.id}>
-                        <span>
-                          {item.id}: {item.quantity};{" "}
-                        </span>
-                      </span>
-                    )
-                  })}
-                </div>
-
-                <div className="box3">
-                  <button
-                    style={{
-                      backgroundColor: item.pizza === 3 ? "blue" : "red",
-                    }}
-                    onClick={updateItem}
-                  >
-                    update
-                  </button>
-                  <button id="del" onClick={myFunction}>
-                    delete
-                  </button>
-                </div>
+            <div className="wrapper" key={item.id}>
+              <div className="box3">
+                {" "}
+                <Link href="/orders/[id]" as={`/orders/${item.id}`}>
+                  <a>{item.amount.name}</a>
+                </Link>
               </div>
-          
+
+              <div className="box3">{item.amount.address.line1}</div>
+
+              <div className="box3">
+                {" "}
+                {item.amount.cartItems.map(item => {
+                  return (
+                    <span key={item.id}>
+                      <span>
+                        {item.id}: {item.quantity};{" "}
+                      </span>
+                    </span>
+                  )
+                })}
+              </div>
+
+              <div className="box3">
+                <button className="blue">
+                  <Link href="/orders/[id]" as={`/orders/${item.id}`}>
+                    <a>update</a>
+                  </Link>
+                </button>
+                <button id="del" onClick={myFunction}>
+                  delete
+                </button>
+              </div>
+            </div>
           )
         }
       })}

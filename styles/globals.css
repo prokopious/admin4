@@ -24,11 +24,8 @@ a {
 }
 
 .box {
-  background-color: rgb(219, 219, 219);
-  color: rgb(43, 43, 43);
-
-  margin-bottom: 1px;
-  padding: 5px;
+padding: 0;
+margin-top: 0;
 }
 
 .wrapper2 {
@@ -86,15 +83,23 @@ body {
 
 #boxy {
   align-items: center;
-  margin-left: 15%;
+  margin-left: 5%;
   margin-right: 15%;
   margin-top: 5%;
-  background-color: rgba(199, 25, 25, 0.37);
+  background-color: rgba(224, 224, 224, 0.37);
 }
 
 .chipmunk {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 130px;
+  padding: 15px;
+}
+
+.chipmunk2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 130px;
+  padding: 15px;
+  background-color: rgb(229, 225, 238);
 }
 
 #boxx {
@@ -151,4 +156,29 @@ body {
 .code {
   font-family: "Courier New", Courier, monospace;
   color: blue;
+}
+
+.blue {
+  background-color: blue;
+}
+
+
+#boxy {
+  padding-top: 3px;
+  padding-bottom: 10px;
+  max-width: 600px;
+}
+
+#nue {
+  padding-left: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+#or {
+  margin-bottom: 0;
+  margin-top: 0;
 }
