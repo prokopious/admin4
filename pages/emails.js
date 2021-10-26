@@ -1,28 +1,29 @@
 import Countries2 from "../components/Countries2"
 import ClientOnly from "../components/ClientOnly"
 import { withSSRContext } from "aws-amplify"
-import CreateProduct from '../components/Product'
-import Navv from '../components/Navbar'
+import CreateProduct from "../components/Product"
+import InvNavv from "../components/InvNav"
+import EmailList from "../components/EmailList"
 
-export default function Page({ authenticated, username }) {
+export default function Inventory({ username }) {
   if (username) {
     return (
       <>
         <div>
           <main>
             <ClientOnly>
-              <Countries2 />
+              <EmailList />
             </ClientOnly>
           </main>
         </div>
       </>
     )
   } else {
-    return <div id="logbox"><div id="logged">You are not logged in.</div>     <style jsx>{`
-p {
-  background-color: red;
-}
-  `}</style></div>
+    return (
+      <div id="logbox">
+        <div id="logged">You are not logged in.</div>
+      </div>
+    )
   }
 }
 

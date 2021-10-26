@@ -2,6 +2,9 @@ import { useQuery, gql } from "@apollo/client"
 import axios from "axios"
 import Link from "next/link"
 
+
+
+
 const QUERY = gql`
   query Squirrels {
     listSquirrels {
@@ -142,6 +145,7 @@ export default function Countries2() {
                 <button id="del" onClick={myFunction}>
                   delete
                 </button>
+
               </div>
             </div>
           )
