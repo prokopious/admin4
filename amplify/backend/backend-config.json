@@ -6,5 +6,11 @@
       "dependsOn": [],
       "customAuth": false
     }
+  },
+  "storage": {
+    "photoview": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    }
   }
 }
